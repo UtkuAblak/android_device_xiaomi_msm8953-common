@@ -1,0 +1,30 @@
+allow init default_android_hwservice:hwservice_manager { add find };
+allow init default_android_vndservice:service_manager { add find };
+allow init device:chr_file { ioctl open write };
+allow init hal_bluetooth_hwservice:hwservice_manager { add find };
+allow init hal_drm_hwservice:hwservice_manager add;
+allow init hal_gnss_hwservice:hwservice_manager { add find };
+allow init hal_power_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder call;
+allow init mediadrmserver:binder transfer;
+allow init persist_file:file rename;
+allow init proc:file { getattr open read write };
+allow init property_socket:sock_file write;
+allow init self:binder call;
+allow init self:netlink_generic_socket { read write };
+allow init self:netlink_kobject_uevent_socket read;
+allow init self:netlink_route_socket read;
+allow init self:process execmem;
+allow init self:rawip_socket setopt;
+allow init self:socket { bind create ioctl read write };
+
+#!!!! This avc is allowed in the current policy
+allow init self:udp_socket ioctl;
+allow init self:udp_socket { read setopt };
+allow init socket_device:sock_file write;
+allow init sysfs:file { open setattr write };
+allow init sysfs_devices_system_cpu:file write;
+allow init sysfs_wake_lock:file append;
+allow init system_net_netd_hwservice:hwservice_manager find;
+allow init tmpfs:lnk_file create;
