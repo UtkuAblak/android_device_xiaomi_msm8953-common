@@ -53,6 +53,10 @@ persist.camera.gyro.disable=0 \
 persist.camera.isp.clock.optmz=0 \
 persist.camera.stats.test=5 \
 persist.vendor.qti.telephony.vt_cam_interface=1 \
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+persist.camera.HAL3.enabled=1
+
 vidc.enc.dcvs.extra-buff-count=2
 
 # Cne/Dpm
